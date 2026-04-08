@@ -1,13 +1,12 @@
 public class GarbageCollection {
-    
-    // finalize method called before garbage collection
+
     @Override
     protected void finalize() throws Throwable {
         System.out.println("Garbage Collected");
     }
 
     public static void main(String[] args) {
-        GCExample obj = new GCExample();
+        GarbageCollection obj = new GarbageCollection();
 
         // Make object eligible for garbage collection
         obj = null;
